@@ -58,7 +58,7 @@ const CouresworkPage = ({children,params}) => {
             getFile();
         },1500);
         
-    },[])
+    },[params?.id])
 
     function onDocumentLoadSuccess({ numPages }){
         setNumPages(numPages);

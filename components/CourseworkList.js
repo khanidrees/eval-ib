@@ -19,7 +19,7 @@ const CourseworkList = () => {
             const coursework = store.coursework[key];
             console.log(coursework);
             return (
-                <CourseworkCard coursework={coursework} isViewAll={isViewAll}/>  
+                <CourseworkCard key={key} coursework={coursework} isViewAll={isViewAll}/>  
             )
         
         })

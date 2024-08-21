@@ -38,7 +38,7 @@ const CourseworkExplore = () => {
                 { Object.keys(store?.coursework)?.length>0 && Object.keys(store.coursework).map(key => {
                     const coursework = store.coursework[key];
                     return (
-                        <CourseworkCard coursework={coursework}/>
+                        <CourseworkCard key={key} coursework={coursework}/>
                         )
                     })
                 }    
@@ -50,7 +50,7 @@ const CourseworkExplore = () => {
                         return;
                     }
                     return (
-                        <CourseworkCard coursework={coursework}/>
+                        <CourseworkCard key={key} coursework={coursework}/>
                         )
                     })
                 }    
@@ -62,7 +62,7 @@ const CourseworkExplore = () => {
                         return;
                     }
                     return (
-                        <CourseworkCard coursework={coursework}/>
+                        <CourseworkCard key={key} coursework={coursework}/>
                         )
                     })
                 }    
@@ -74,7 +74,7 @@ const CourseworkExplore = () => {
                         return;
                     }
                     return (
-                        <CourseworkCard coursework={coursework}/>
+                        <CourseworkCard key={key} coursework={coursework}/>
                         )
                     })
                 }    
@@ -86,7 +86,7 @@ const CourseworkExplore = () => {
                         return;
                     }
                     return (
-                        <CourseworkCard coursework={coursework}/>
+                        <CourseworkCard key={key} coursework={coursework}/>
                         )
                     })
                 }    </TabsContent>
