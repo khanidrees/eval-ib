@@ -6,7 +6,7 @@ export const useCourseStore = create(
     coursework: {},
     addCourseWork: (item) => set((state) => ({ coursework: { ...state.coursework, item } })),
   })
-);
+); 
 
 
 
