@@ -5,6 +5,9 @@ import { db } from '@/db';
 import { CloudFog } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { pdfjs,  Document, Page } from 'react-pdf';
+import * as PDFJS from 'pdfjs-dist/build/pdf.min.mjs';
+const workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${PDFJS.version}/pdf.worker.min.js`;
+PDFJS.GlobalWorkerOptions.workerSrc = workerSrc;
 import {
     Accordion,
     AccordionContent,
