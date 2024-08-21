@@ -1,7 +1,9 @@
 import { Inter } from "next/font/google";
 import Image from "next/image";
 import "./globals.css";
-
+import 'core-js/full/promise/with-resolvers.js';
+import { polyfillPromiseWithResolvers } from '@/polyfills.mjs';
+polyfillPromiseWithResolvers();
 
 import icon from '../public/icon.svg';
 import icon1 from '../public/icons/1.svg';

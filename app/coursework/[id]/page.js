@@ -13,27 +13,29 @@ import {
   } from "@/components/ui/accordion"
 import { Skeleton } from '@/components/ui/skeleton';
 
-if (typeof window !== 'undefined') {
-    window.Promise.withResolvers = function () {
-      let resolve, reject;
-      const promise = new Promise((res, rej) => {
-        resolve = res;
-        reject = rej;
-      });
-      return { promise, resolve, reject };
-    };
-  } else {
-    global.Promise.withResolvers = function () {
-      let resolve, reject;
-      const promise = new Promise((res, rej) => {
-        resolve = res;
-        reject = rej;
-      });
-      return { promise, resolve, reject };
-    };
-  }
+// if (typeof window !== 'undefined') {
+//     window.Promise.withResolvers = function () {
+//       let resolve, reject;
+//       const promise = new Promise((res, rej) => {
+//         resolve = res;
+//         reject = rej;
+//       });
+//       return { promise, resolve, reject };
+//     };
+//   } else {
+//     global.Promise.withResolvers = function () {
+//       let resolve, reject;
+//       const promise = new Promise((res, rej) => {
+//         resolve = res;
+//         reject = rej;
+//       });
+//       return { promise, resolve, reject };
+//     };
+//   }
 
-  pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.mjs`;
+  // Pdfviewer component 
+
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.mjs`;
 // pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 //     'pdfjs-dist/legacy/build/pdf.worker.min.mjs',
 //     import.meta.url,
