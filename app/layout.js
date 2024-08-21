@@ -1,7 +1,22 @@
 import { Inter } from "next/font/google";
+import Image from "next/image";
 import "./globals.css";
 
+
+import icon from '../public/icon.svg';
+import icon1 from '../public/icons/1.svg';
+import icon2 from '../public/icons/2.svg';
+import icon3 from '../public/icons/3.svg';
+import icon4 from '../public/icons/4.svg';
+import icon5 from '../public/icons/5.svg';
+import icon6 from '../public/icons/6.svg';
+import icon7 from '../public/icons/7.svg';
+
 const inter = Inter({ subsets: ["latin"] });
+// if (process.env.NEXT_PUBLIC_API_MOCKING === "enabled") {
+//   console.log("hi");
+//   require("../mocks");
+// }
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +26,86 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className+ ' flex justify-between items-start w-full	'}>
+        <div >
+          <div className="m-2">
+            <div>
+              <Image 
+              src={icon}
+              alt="App Icon"
+              height={36}
+              width={36}
+              className="mb-4"
+              />
+            </div>
+            <div>
+              <Image 
+              src={icon1}
+              alt="App Icon"
+              height={36}
+              width={36}
+              className="mb-2"
+              />
+              <Image 
+              src={icon2}
+              alt="App Icon"
+              height={36}
+              width={36}
+              className="mb-2"
+              />
+              <Image 
+              src={icon3}
+              alt="App Icon"
+              height={36}
+              width={36}
+              className="mb-2"
+              />
+              <Image 
+              src={icon4}
+              alt="App Icon"
+              height={36}
+              width={36}
+              className="mb-2"
+              />
+            </div>
+
+          </div>
+        </div>
+        <div className="flex justify-center items-center w-full">
+        {children}
+        </div>
+        <div >
+          <div className="m-3">
+            <div>
+              <Image 
+              src={icon5}
+              alt="App Icon"
+              height={64}
+              width={62}
+              className="mb-3"
+              />
+            </div>
+            <div>
+              <Image 
+              src={icon6}
+              alt="App Icon"
+              height={44}
+              width={44}
+              className="mb-3"
+              />
+              <Image 
+              src={icon7}
+              alt="App Icon"
+              height={44}
+              width={44}
+              className="mb-3"
+              />
+              
+            </div>
+
+          </div>
+        </div>
+        </body>
     </html>
   );
 }
